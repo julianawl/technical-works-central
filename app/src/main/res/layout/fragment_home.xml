@@ -6,5 +6,68 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
+    <TextView
+        android:id="@+id/title_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Explore artigos da URI"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_bar_home"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintEnd_toStartOf="@id/filter_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_home" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/filter_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@color/white"
+        android:text="Filtrar"
+        app:layout_constraintBottom_toBottomOf="@+id/search_bar_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/search_bar_home"
+        app:layout_constraintTop_toTopOf="@id/search_bar_home" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/search_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Pesquisar"
+        app:layout_constraintEnd_toEndOf="@+id/filter_btn"
+        app:layout_constraintStart_toStartOf="@+id/search_bar_home"
+        app:layout_constraintTop_toBottomOf="@+id/search_bar_home" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/search_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:visibility="gone"
+        tools:listitem="@layout/item_search"
+        app:layout_constraintTop_toBottomOf="@id/search_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
