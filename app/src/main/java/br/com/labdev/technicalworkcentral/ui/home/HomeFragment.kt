@@ -9,6 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import br.com.labdev.technicalworkcentral.R
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
 
@@ -20,5 +22,23 @@ class HomeFragment : Fragment() {
             savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_home, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val dialogView = layoutInflater.inflate(R.layout.dialog_filter, null)
+        filter_btn.setOnClickListener {
+            MaterialAlertDialogBuilder(requireContext())
+                .setTitle("Filtrar")
+                .setView(dialogView)
+                .setPositiveButton("OK"){ dialog, _ ->
+                    dialog.dismiss()
+                }
+                .setNeutralButton("CANCEL"){ dialog, _ ->
+                    dialog.dismiss()
+                }.show()
+
+        }
     }
 }
