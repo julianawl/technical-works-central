@@ -5,8 +5,16 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_profile">Profile</string>
     <string name="author_details">Autor: </string>
+    <string name="authorX_details">René Descartes</string>
     <string name="adviserTeacher_details">Professor Orientador: </string>
     <string name="disciplineTeacher_details">Professor da Disciplina: </string>
     <string name="studyArea_details">Área de Estudo: </string>
     <string name="course_details">Curso: </string>
+    <string name="teacherExample_details">Professor X</string>
+    <string name="studyExample_details">Programação Web</string>
+    <string name="courseExample_details">Ciência da Computação</string>
+    <string name="title_details">metodo.PDF</string>
+    <string name="documentPreview_details">Document preview</string>
+    <string name="size_details">4,2MB</string>
+    <string name="download_details">DOWNLOAD</string>
 </resources>
