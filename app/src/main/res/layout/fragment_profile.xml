@@ -143,5 +143,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvStatus" />
 
+    <ImageView
+        android:id="@+id/ivemail"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/gmail"
+        android:contentDescription="@string/email_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLinkedin" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

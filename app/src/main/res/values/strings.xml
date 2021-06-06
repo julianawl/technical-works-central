@@ -11,6 +11,7 @@
     <string name="status_profile">Status: </string>
     <string name="statusAnswer_profile">Cursando</string>
     <string name="linkedin_profile">Linkedin</string>
+    <string name="email_profile">E-mail</string>
     <string name="author_details">Autor: </string>
     <string name="authorX_details">René Descartes</string>
     <string name="adviserTeacher_details">Professor Orientador: </string>
@@ -24,4 +25,14 @@
     <string name="documentPreview_details">Document preview</string>
     <string name="size_details">4,2MB</string>
     <string name="download_details">DOWNLOAD</string>
+    <string name="documentRegistration_documentRegistration">Cadastro de Trabalho</string>
+    <string name="documentName_documentRegistration">Título do Trabalho</string>
+    <string name="advisorName_documentRegistration">Nome do Orientador</string>
+    <string name="studyArea_documentRegistration">Área de Estudo</string>
+    <string name="keyWords_documentRegistration">Palavras-Chave</string>
+    <string name="upload_documentRegistration">Upload</string>
+    <string name="selectDocument_documentRegistration">Selecione um documento .pdf</string>
+    <string name="cancel_documentRegistration">Cancelar</string>
+    <string name="register_documentRegistration">Cadastrar</string>
+
 </resources>
