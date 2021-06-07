@@ -34,5 +34,13 @@
     <string name="selectDocument_documentRegistration">Selecione um documento .pdf</string>
     <string name="cancel_documentRegistration">Cancelar</string>
     <string name="register_documentRegistration">Cadastrar</string>
+    <string name="login_login">LOGIN</string>
+    <string name="dontHaveAccount_login">Ainda não tem uma conta?</string>
+    <string name="register_login">Cadastre-se</string>
+    <string name="email_login">Email</string>
+    <string name="password_login">Senha</string>
+    <string name="required_login">Obrigátorio</string>
+    <string name="signIn_login">ENTRAR</string>
+    <string name="forgotPassword_login">Esqueci a Senha</string>
 
 </resources>
