@@ -40,7 +40,12 @@
     <string name="email_login">Email</string>
     <string name="password_login">Senha</string>
     <string name="required_login">Obrigátorio</string>
-    <string name="signIn_login">ENTRAR</string>
+    <string name="signin_login">ENTRAR</string>
     <string name="forgotPassword_login">Esqueci a Senha</string>
+    <string name="regisiter_register">CADASTRO</string>
+    <string name="haveAccount_register">Já possui uma conta?</string>
+    <string name="signin_register">Faça login</string>
+    <string name="name_register">Nome Completo</string>
+    <string name="register_register">CADASTRAR</string>
 
 </resources>

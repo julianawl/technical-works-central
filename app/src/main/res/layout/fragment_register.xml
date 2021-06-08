@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.login.LoginFragment">
+    tools:context=".ui.register.RegisterFragment">
 
 
     <TextView
-        android:id="@+id/tvLogin"
+        android:id="@+id/tvRegisterTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="@string/login_login"
+        android:text="@string/regisiter_register"
         android:textColor="@color/black"
         android:textStyle="bold"
         android:textSize="30sp"
@@ -21,33 +21,56 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvdontHaveAccount"
+        android:id="@+id/tvHaveAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="4dp"
-        android:text="@string/dontHaveAccount_login"
+        android:text="@string/haveAccount_register"
         android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/tvRegister"
-        app:layout_constraintTop_toBottomOf="@+id/tvLogin" />
+        app:layout_constraintEnd_toStartOf="@+id/tvSignIn"
+        app:layout_constraintTop_toBottomOf="@+id/tvRegisterTitle" />
 
     <TextView
-        android:id="@+id/tvRegister"
+        android:id="@+id/tvSignIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="75dp"
-        android:text="@string/register_login"
+        android:layout_marginEnd="87dp"
+        android:text="@string/signin_register"
         android:textColor="@color/blue"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/tvRegisterTitle" />
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:id="@+id/tvEmailLayout"
+        android:id="@+id/tvNameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:hint="@string/name_register"
+        app:helperText="@string/required_login"
+        app:helperTextTextColor="@color/red"
+        app:startIconDrawable="@drawable/ic_person"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHaveAccount">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tvNameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/tvEmailRegisterLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -60,17 +83,17 @@
         app:endIconMode="clear_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvdontHaveAccount">
+        app:layout_constraintTop_toBottomOf="@+id/tvNameLayout">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tvEmailText"
+            android:id="@+id/tvEmailRegisterText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:id="@+id/tvPasswordLayout"
+        android:id="@+id/tvPasswordRegistLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -83,29 +106,29 @@
         app:endIconMode="password_toggle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvEmailLayout">
+        app:layout_constraintTop_toBottomOf="@+id/tvEmailRegisterLayout">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tvPasswordText"
+            android:id="@+id/tvPsswordRegisterText"
             android:inputType="textPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/btnSignIn"
+        android:id="@+id/btnRegisterr"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
-        android:text="@string/signin_login"
+        android:text="@string/register_register"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvPasswordLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/tvPasswordRegistLayout" />
 
     <TextView
-        android:id="@+id/tvForgotPassword"
+        android:id="@+id/tvForgotPasssword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -115,5 +138,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSignIn" />
+        app:layout_constraintTop_toBottomOf="@+id/btnRegisterr" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
