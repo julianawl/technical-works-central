@@ -3,6 +3,7 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <!-- Fragment Document Profile -->
     <string name="title_profile">Profile</string>
     <string name="name_profile">Nome completo: </string>
     <string name="nameAnswer_profile">René Descartes</string>
@@ -12,6 +13,7 @@
     <string name="statusAnswer_profile">Cursando</string>
     <string name="linkedin_profile">Linkedin</string>
     <string name="email_profile">E-mail</string>
+    <!-- Fragment Document Details -->
     <string name="author_details">Autor: </string>
     <string name="authorX_details">René Descartes</string>
     <string name="adviserTeacher_details">Professor Orientador: </string>
@@ -25,6 +27,7 @@
     <string name="documentPreview_details">Document preview</string>
     <string name="size_details">4,2MB</string>
     <string name="download_details">DOWNLOAD</string>
+    <!-- Fragment Document Register -->
     <string name="documentRegistration_documentRegistration">Cadastro de Trabalho</string>
     <string name="documentName_documentRegistration">Título do Trabalho</string>
     <string name="advisorName_documentRegistration">Nome do Orientador</string>
@@ -34,6 +37,7 @@
     <string name="selectDocument_documentRegistration">Selecione um documento .pdf</string>
     <string name="cancel_documentRegistration">Cancelar</string>
     <string name="register_documentRegistration">Cadastrar</string>
+    <!-- Fragment Login -->
     <string name="login_login">LOGIN</string>
     <string name="dontHaveAccount_login">Ainda não tem uma conta?</string>
     <string name="register_login">Cadastre-se</string>
@@ -42,10 +46,12 @@
     <string name="required_login">Obrigátorio</string>
     <string name="signin_login">ENTRAR</string>
     <string name="forgotPassword_login">Esqueci a Senha</string>
+    <!-- Fragment Register -->
     <string name="regisiter_register">CADASTRO</string>
     <string name="haveAccount_register">Já possui uma conta?</string>
     <string name="signin_register">Faça login</string>
     <string name="name_register">Nome Completo</string>
     <string name="register_register">CADASTRAR</string>
-
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
