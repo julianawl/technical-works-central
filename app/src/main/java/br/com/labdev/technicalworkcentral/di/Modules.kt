@@ -1,5 +1,6 @@
 package br.com.labdev.technicalworkcentral.di
 
+import br.com.labdev.technicalworkcentral.data.repository.UserRepository
 import br.com.labdev.technicalworkcentral.ui.details.DetailsViewModel
 import br.com.labdev.technicalworkcentral.ui.documentregistration.DocumentRegistrationViewModel
 import br.com.labdev.technicalworkcentral.ui.home.viewmodel.HomeViewModel
@@ -22,7 +23,8 @@ val homeModule = module {
 }
 
 val loginModule = module {
-    viewModel { LoginViewModel() }
+    viewModel { LoginViewModel(repository = get()) }
+    single { UserRepository() }
 }
 
 val profileModule = module {
@@ -30,5 +32,5 @@ val profileModule = module {
 }
 
 val registerModule = module {
-    viewModel { RegisterViewModel() }
+    viewModel { RegisterViewModel(repository = get()) }
 }

@@ -183,19 +183,19 @@
         android:id="@+id/btnDownload"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginHorizontal="16dp"
+        android:backgroundTint="@color/blueish_dark"
         android:drawableStart="@drawable/ic_download"
         android:drawablePadding="-100dp"
         android:paddingStart="115dp"
         android:paddingEnd="0dp"
         android:text="@string/download_details"
         android:textColor="@color/white"
-        android:backgroundTint="@color/blueish_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSetCourse" />
+        app:layout_constraintTop_toBottomOf="@+id/tvSetCourse"
+        app:layout_constraintVertical_bias="0.100000024" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

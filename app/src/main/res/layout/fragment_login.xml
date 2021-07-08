@@ -55,7 +55,6 @@
         android:layout_marginEnd="24dp"
         android:hint="@string/email_login"
         app:helperText="@string/required_login"
-        app:helperTextTextColor="@color/red"
         app:startIconDrawable="@drawable/ic_email"
         app:endIconMode="clear_text"
         app:layout_constraintEnd_toEndOf="parent"
@@ -78,9 +77,8 @@
         android:layout_marginEnd="24dp"
         android:hint="@string/password_login"
         app:helperText="@string/required_login"
-        app:helperTextTextColor="@color/red"
         app:startIconDrawable="@drawable/ic_lock"
-        app:endIconMode="password_toggle"
+        app:passwordToggleEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvEmailLayout">
@@ -93,7 +91,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnSignIn"
+        android:id="@+id/btnLogin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -117,5 +115,5 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSignIn" />
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 </androidx.constraintlayout.widget.ConstraintLayout>

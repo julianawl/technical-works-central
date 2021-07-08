@@ -62,4 +62,6 @@
     <string name="palavra_chave">Palavra-chave</string>
     <string name="nome_do_orientador">Nome do Orientador</string>
     <string name="nome_do_autor">Nome do Autor</string>
+    <string name="blank_error_message">Campos obrigatórios em branco</string>
+    <string name="confirmar_senha">Confirmar senha</string>
 </resources>

@@ -6,18 +6,43 @@
     android:layout_height="match_parent"
     tools:context=".ui.register.RegisterFragment">
 
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/civProfileImageRegister"
-        android:layout_width="96dp"
-        android:layout_height="96dp"
-        android:layout_centerInParent="true"
+    <TextView
+        android:id="@+id/tvRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:src="@drawable/profile_image_original"
+        android:text="CADASTRO"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvHaveAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="5dp"
+        android:text="@string/haveAccount_register"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvSignIn"
+        app:layout_constraintTop_toBottomOf="@+id/tvRegister" />
+
+    <TextView
+        android:id="@+id/tvSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/signin_register"
+        android:textColor="@color/blueish_light"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginEnd="87dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvHaveAccount"
+        app:layout_constraintBottom_toBottomOf="@id/tvHaveAccount"/>
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -29,12 +54,11 @@
         android:layout_marginEnd="24dp"
         android:hint="@string/name_register"
         app:helperText="@string/required_login"
-        app:helperTextTextColor="@color/red"
         app:startIconDrawable="@drawable/ic_person"
         app:endIconMode="clear_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/civProfileImageRegister">
+        app:layout_constraintTop_toBottomOf="@id/tvHaveAccount">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/tvNameText"
@@ -52,7 +76,6 @@
         android:layout_marginEnd="24dp"
         android:hint="@string/email_login"
         app:helperText="@string/required_login"
-        app:helperTextTextColor="@color/red"
         app:startIconDrawable="@drawable/ic_email"
         app:endIconMode="clear_text"
         app:layout_constraintEnd_toEndOf="parent"
@@ -75,7 +98,6 @@
         android:layout_marginEnd="24dp"
         android:hint="@string/password_login"
         app:helperText="@string/required_login"
-        app:helperTextTextColor="@color/red"
         app:startIconDrawable="@drawable/ic_lock"
         app:endIconMode="password_toggle"
         app:layout_constraintEnd_toEndOf="parent"
@@ -89,8 +111,31 @@
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/tvConfirmPasswordRegistLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:hint="@string/confirmar_senha"
+        app:helperText="@string/required_login"
+        app:startIconDrawable="@drawable/ic_lock"
+        app:endIconMode="password_toggle"
+        app:layout_constraintTop_toBottomOf="@id/tvPasswordRegistLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tvConfirmPasswordRegisterText"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnRegisterr"
+        android:id="@+id/btnRegister"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -101,44 +146,6 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvPasswordRegistLayout" />
-
-    <TextView
-        android:id="@+id/tvForgotPasssword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/forgotPassword_login"
-        android:textColor="@color/blueish_light"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRegisterr" />
-
-    <TextView
-        android:id="@+id/tvHaveAccount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/haveAccount_register"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/tvSignIn"
-        app:layout_constraintTop_toBottomOf="@+id/tvForgotPasssword" />
-
-    <TextView
-        android:id="@+id/tvSignIn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="87dp"
-        android:text="@string/signin_register"
-        android:textColor="@color/blueish_light"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvForgotPasssword" />
-
+        app:layout_constraintTop_toBottomOf="@+id/tvConfirmPasswordRegistLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
