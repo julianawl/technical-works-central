@@ -1,4 +1,4 @@
-package br.com.labdev.technicalworkcentral.ui.home
+package br.com.labdev.technicalworkcentral.ui.home.dialog
 
 import android.os.Bundle
 import android.view.Gravity
@@ -9,6 +9,7 @@ import androidx.fragment.app.DialogFragment
 import br.com.labdev.technicalworkcentral.R
 import com.google.android.material.slider.RangeSlider
 import kotlinx.android.synthetic.main.dialog_filter.view.*
+import java.util.*
 
 class FilterDialog(
     var informedFilters: (a: String, m: String, s: String,
@@ -41,7 +42,7 @@ class FilterDialog(
         val keyWord = rootView.dialog_keyword_edtxt.editableText.toString()
         val year: RangeSlider = rootView.findViewById(R.id.dialog_year_slider)
         year.valueFrom = 1995f
-        year.valueTo = 2021f
+        year.valueTo = Calendar.YEAR.toFloat()
         year.stepSize = 1f
         year.values = listOf(1995f,2021f)
 

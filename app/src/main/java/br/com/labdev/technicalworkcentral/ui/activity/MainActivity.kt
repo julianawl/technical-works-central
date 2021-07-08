@@ -1,13 +1,11 @@
-package br.com.labdev.technicalworkcentral
+package br.com.labdev.technicalworkcentral.ui.activity
 
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import br.com.labdev.technicalworkcentral.R
 
 class MainActivity : AppCompatActivity() {
 

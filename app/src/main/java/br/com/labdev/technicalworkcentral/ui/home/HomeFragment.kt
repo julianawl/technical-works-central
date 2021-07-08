@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import br.com.labdev.technicalworkcentral.R
+import br.com.labdev.technicalworkcentral.ui.home.dialog.FilterDialog
+import br.com.labdev.technicalworkcentral.ui.home.viewmodel.HomeViewModel
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
