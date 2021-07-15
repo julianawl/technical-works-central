@@ -9,7 +9,7 @@
       "resumo": "Lorem ipsum aenean risus condimentum faucibus vivamus eget ornare pulvinar, nunc vehicula nisl purus leo purus justo aliquam feugiat, tristique sit hac auctor aliquet felis viverra lobortis. ipsum odio felis nulla nibh dolor purus aliquet sit, ultricies morbi litora fermentum inceptos aenean lobortis, gravida elementum aenean sed pharetra ut pulvinar. nullam adipiscing mattis aptent tincidunt donec adipiscing, aenean taciti donec pellentesque nibh, litora risus congue rhoncus primis. conubia aliquam donec cras integer sapien arcu tincidunt nullam iaculis bibendum ac, felis semper lectus adipiscing velit venenatis elit neque elit ultricies.",
       "areaDeEstudo": "Programação Orientada a Objetos",
       "curso": "Ciência da Computação",
-      "urlArquivo": ""
+      "urlArquivo": "https://knowledge-uri.s3.sa-east-1.amazonaws.com"
     },
     {
       "ano_publicacao": 2018,
@@ -23,21 +23,4 @@
       "curso": "Ciência da Computação",
       "urlArquivo": ""
     }
-  ]{
-    "documentos": [
-      {
-        "ano_publicacao": 0,
-        "docUrl": "string",
-        "id": 0,
-        "nomeOrientador": "string",
-        "palavras_chave": [
-          "string"
-        ],
-        "resumo": "string",
-        "tipo": 0,
-        "titulo": "string"
-      }
-    ],
-    "id": 0,
-    "nome": "string"
-  }
+  ]

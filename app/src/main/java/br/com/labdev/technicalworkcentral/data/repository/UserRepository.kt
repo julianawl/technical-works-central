@@ -19,7 +19,7 @@ class UserRepository(private val cache: Cache) {
         return response
     }
 
-    suspend fun register(name: String, lastName: String, email: String, password: String): Response<Any> {
+    suspend fun register(name: String, lastName: String, email: String, password: String): Response<Unit> {
         val userInfo = UserRegister(name = name, lastName = lastName, email = email, password = password)
         val response = Api.invoke().register(userInfo)
         when(response.code()){
