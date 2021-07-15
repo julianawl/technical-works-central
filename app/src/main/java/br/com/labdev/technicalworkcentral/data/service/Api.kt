@@ -1,6 +1,7 @@
 package br.com.labdev.technicalworkcentral.data.service
 
 import android.content.Context
+import br.com.labdev.technicalworkcentral.model.UserLogin
 import br.com.labdev.technicalworkcentral.model.UserRegister
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -16,6 +17,9 @@ interface Api {
 
     @POST("usuarios/cadastro")
     suspend fun register(@Body userInfo: UserRegister): Response<Any>
+
+    @POST("")
+    suspend fun login(@Body userInfo: UserLogin): Response<Any>
 
     companion object{
         private fun createClient():OkHttpClient{

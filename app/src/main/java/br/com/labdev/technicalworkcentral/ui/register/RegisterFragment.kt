@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
+import br.com.labdev.technicalworkcentral.R
 import br.com.labdev.technicalworkcentral.databinding.FragmentRegisterBinding
 import br.com.labdev.technicalworkcentral.observe
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -28,18 +29,21 @@ class RegisterFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        goToLogin()
         setRegister()
         inscribeObservers()
     }
 
     private fun setRegister() {
-        val name = binding.tvNameText.editableText.toString()
-        val lastName = binding.tvLastNameText.editableText.toString()
-        val email = binding.tvEmailRegisterText.editableText.toString()
-        val password = binding.tvPasswordRegisterText.editableText.toString()
-        val confirmPassword = binding.tvConfirmPasswordRegisterText.editableText.toString()
+        binding.btnRegister.setOnClickListener {
+            val name = binding.tvNameText.editableText.toString()
+            val lastName = binding.tvLastNameText.editableText.toString()
+            val email = binding.tvEmailRegisterText.editableText.toString()
+            val password = binding.tvPasswordRegisterText.editableText.toString()
+            val confirmPassword = binding.tvConfirmPasswordRegisterText.editableText.toString()
 
-        viewModel.validateCredentials(name, lastName, email, password, confirmPassword)
+            viewModel.validateCredentials(name, lastName, email, password, confirmPassword)
+        }
     }
 
     private fun inscribeObservers(){
@@ -59,6 +63,9 @@ class RegisterFragment : Fragment() {
             Toast.makeText(requireContext(),
                 "Senhas diferentes", Toast.LENGTH_SHORT).show()
         }
+        observe(viewModel.credentialIsInvalidError){
+            Toast.makeText(requireContext(), "Ocorreu um erro", Toast.LENGTH_SHORT).show()
+        }
         observe(viewModel.registerSucceed){
             goToProfile()
         }
@@ -66,5 +73,11 @@ class RegisterFragment : Fragment() {
 
     private fun goToProfile() {
         controller.navigate(RegisterFragmentDirections.actionRegisterFragmentToNavigationProfile())
+    }
+
+    private fun goToLogin(){
+        binding.tvSignIn.setOnClickListener {
+            controller.navigate(R.id.loginFragment)
+        }
     }
 }

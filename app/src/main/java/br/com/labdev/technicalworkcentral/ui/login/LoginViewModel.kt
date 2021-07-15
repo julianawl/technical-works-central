@@ -22,9 +22,6 @@ class LoginViewModel(
 
 
     private fun doLogin(email: String, password:String){
-        viewModelScope.launch {
-            repository.login(email, password)
-        }
         _loginSucceed.postValue(Unit)
     }
 

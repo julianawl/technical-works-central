@@ -33,9 +33,12 @@ class RegisterViewModel(
 
     private fun doRegister(name: String, lastName: String, email: String, password:String){
         viewModelScope.launch {
-            repository.register(name, lastName, email, password)
+            val response = repository.register(name, lastName, email, password)
+            when(response.code()){
+                201 -> _registerSucceed.postValue(Unit)
+                else -> _credentialIsInvalidError.postValue(Unit)
+            }
         }
-        _registerSucceed.postValue(Unit)
     }
 
     fun validateCredentials(name: String, lastName: String, email: String, password: String, confirmPassword: String){

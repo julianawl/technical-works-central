@@ -1,16 +1,16 @@
 package br.com.labdev.technicalworkcentral.ui.login
 
 import android.os.Bundle
-import android.text.Layout
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import br.com.labdev.technicalworkcentral.R
 import br.com.labdev.technicalworkcentral.databinding.FragmentLoginBinding
 import br.com.labdev.technicalworkcentral.observe
+import br.com.labdev.technicalworkcentral.ui.home.dialog.ForgotPasswordDialog
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
@@ -20,6 +20,7 @@ class LoginFragment : Fragment() {
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
     private val controller by lazy { findNavController() }
+    private var forgotPasswordDialog: ForgotPasswordDialog? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,8 +32,26 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        goToRegister()
+        forgotPassword()
         setLogin()
         inscribeObservers()
+    }
+
+    private fun goToRegister() {
+        binding.tvRegister.setOnClickListener {
+            controller.navigate(R.id.registerFragment)
+        }
+    }
+
+    private fun forgotPassword(){
+        binding.tvForgotPassword.setOnClickListener {
+            forgotPasswordDialog = ForgotPasswordDialog()
+            activity?.let {
+                forgotPasswordDialog?.show(it.supportFragmentManager,
+                    "Forgot Password Dialog")
+            }
+        }
     }
 
     private fun setLogin() {

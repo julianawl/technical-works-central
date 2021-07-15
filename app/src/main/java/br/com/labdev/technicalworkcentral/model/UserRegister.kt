@@ -6,6 +6,11 @@ import java.io.Serializable
 data class UserRegister(
     @SerializedName("nome") val name: String,
     @SerializedName("sobrenome") val lastName: String,
-    @SerializedName("senha") val password: String,
-    @SerializedName("email") val email: String
+    @SerializedName("email") val email: String,
+    @SerializedName("senha") val password: String
+): Serializable
+
+data class UserLogin(
+    @SerializedName("email") val email: String,
+    @SerializedName("senha") val password: String
 ): Serializable

@@ -1,77 +1,43 @@
-{
-  "results": [
+  [
     {
-      "year": 2020,
-      "articleTitle": "Discurso do Método",
-      "author": {
-          "name": "René Descartes",
-          "pic": "https://lh4.googleusercontent.com/proxy/2m86WLTofSdbUzjBl8Fnjvzurv9zvYjzuOI3SjTC1cHwsFXd6SyEYdbrTvEw1DrC8VfeV536iJvZI9-XInq54Pq1XfxjIh0ut3H8kHrlvEaqxIo=s0-d",
-          "socialMedia": [
-            {
-              "smName": "Gmail",
-              "smLink": ""
-            },
-            {
-              "smName": "Linkedin",
-              "smLink": ""
-            }
-          ]
-        },
-      "mentor": {
-          "name": "Professor X",
-          "pic": "https://lh4.googleusercontent.com/proxy/2m86WLTofSdbUzjBl8Fnjvzurv9zvYjzuOI3SjTC1cHwsFXd6SyEYdbrTvEw1DrC8VfeV536iJvZI9-XInq54Pq1XfxjIh0ut3H8kHrlvEaqxIo=s0-d",
-          "socialMedia": [
-            {
-              "smName": "Gmail",
-              "smLink": ""
-            },
-            {
-              "smName": "Linkedin",
-              "smLink": ""
-            }
-          ]
-        },
-      "studyArea": "Programação Orientada a Objetos",
-      "course": "Ciência da Computação",
-      "articleDocument": ""
+      "ano_publicacao": 2020,
+      "id": 1,
+      "titulo": "Discurso do Método",
+      "nomeAutor": "René Descartes",
+      "nomeOrientador": "Professor X",
+      "tipoDeTrabalho": "Tese de Doutorado",
+      "resumo": "Lorem ipsum aenean risus condimentum faucibus vivamus eget ornare pulvinar, nunc vehicula nisl purus leo purus justo aliquam feugiat, tristique sit hac auctor aliquet felis viverra lobortis. ipsum odio felis nulla nibh dolor purus aliquet sit, ultricies morbi litora fermentum inceptos aenean lobortis, gravida elementum aenean sed pharetra ut pulvinar. nullam adipiscing mattis aptent tincidunt donec adipiscing, aenean taciti donec pellentesque nibh, litora risus congue rhoncus primis. conubia aliquam donec cras integer sapien arcu tincidunt nullam iaculis bibendum ac, felis semper lectus adipiscing velit venenatis elit neque elit ultricies.",
+      "areaDeEstudo": "Programação Orientada a Objetos",
+      "curso": "Ciência da Computação",
+      "urlArquivo": ""
     },
     {
-      "year": 2020,
-      "articleTitle": "Discurso do Método",
-      "author": [
-        {
-          "name": "René Descartes",
-          "pic": "https://lh4.googleusercontent.com/proxy/2m86WLTofSdbUzjBl8Fnjvzurv9zvYjzuOI3SjTC1cHwsFXd6SyEYdbrTvEw1DrC8VfeV536iJvZI9-XInq54Pq1XfxjIh0ut3H8kHrlvEaqxIo=s0-d",
-          "socialMedia": [
-            {
-              "smName": "Gmail",
-              "smLink": ""
-            },
-            {
-              "smName": "Linkedin",
-              "smLink": ""
-            }
-          ]
-        }
-      ],
-      "mentor": [
-        {
-          "name": "Professor X",
-          "pic": "https://lh4.googleusercontent.com/proxy/2m86WLTofSdbUzjBl8Fnjvzurv9zvYjzuOI3SjTC1cHwsFXd6SyEYdbrTvEw1DrC8VfeV536iJvZI9-XInq54Pq1XfxjIh0ut3H8kHrlvEaqxIo=s0-d",
-          "socialMedia": [
-            {
-              "smName": "Gmail",
-              "smLink": ""
-            },
-            {
-              "smName": "Linkedin",
-              "smLink": ""
-            }
-          ]
-        }
-      ],
-      "studyArea": "Programação Orientada a Objetos",
-      "course": "Ciência da Computação"
+      "ano_publicacao": 2018,
+      "id": 2,
+      "titulo": "Discurso do Método",
+      "nomeAutor": "René Descartes",
+      "nomeOrientador": "Professor Y",
+      "tipoDeTrabalho": "Tese de Doutorado",
+      "resumo": "Lorem ipsum aenean risus condimentum faucibus vivamus eget ornare pulvinar, nunc vehicula nisl purus leo purus justo aliquam feugiat, tristique sit hac auctor aliquet felis viverra lobortis. ipsum odio felis nulla nibh dolor purus aliquet sit, ultricies morbi litora fermentum inceptos aenean lobortis, gravida elementum aenean sed pharetra ut pulvinar. nullam adipiscing mattis aptent tincidunt donec adipiscing, aenean taciti donec pellentesque nibh, litora risus congue rhoncus primis. conubia aliquam donec cras integer sapien arcu tincidunt nullam iaculis bibendum ac, felis semper lectus adipiscing velit venenatis elit neque elit ultricies.",
+      "areaDeEstudo": "Programação Web",
+      "curso": "Ciência da Computação",
+      "urlArquivo": ""
     }
-  ]
-}
+  ]{
+    "documentos": [
+      {
+        "ano_publicacao": 0,
+        "docUrl": "string",
+        "id": 0,
+        "nomeOrientador": "string",
+        "palavras_chave": [
+          "string"
+        ],
+        "resumo": "string",
+        "tipo": 0,
+        "titulo": "string"
+      }
+    ],
+    "id": 0,
+    "nome": "string"
+  }
