@@ -32,7 +32,7 @@ class HomeFragment : Fragment() {
             filterDialog.show(
                 requireActivity().supportFragmentManager, "filter-dialog"
             )
-            filterDialog.informedFilters = { _,_,_,_,_,_ ->
+            filterDialog.informedFilters = { _,_,_,_,_,_,_ ->
                 //TODO viewmodel
             }
         }

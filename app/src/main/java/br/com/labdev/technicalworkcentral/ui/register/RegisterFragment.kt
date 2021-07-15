@@ -7,11 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
-import br.com.labdev.technicalworkcentral.R
-import br.com.labdev.technicalworkcentral.databinding.FragmentLoginBinding
 import br.com.labdev.technicalworkcentral.databinding.FragmentRegisterBinding
 import br.com.labdev.technicalworkcentral.observe
-import br.com.labdev.technicalworkcentral.ui.login.LoginViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class RegisterFragment : Fragment() {
@@ -36,12 +33,13 @@ class RegisterFragment : Fragment() {
     }
 
     private fun setRegister() {
-        val fullName = binding.tvNameText.editableText.toString()
+        val name = binding.tvNameText.editableText.toString()
+        val lastName = binding.tvLastNameText.editableText.toString()
         val email = binding.tvEmailRegisterText.editableText.toString()
         val password = binding.tvPasswordRegisterText.editableText.toString()
         val confirmPassword = binding.tvConfirmPasswordRegisterText.editableText.toString()
 
-        viewModel.validateCredentials(fullName, email, password, confirmPassword)
+        viewModel.validateCredentials(name, lastName, email, password, confirmPassword)
     }
 
     private fun inscribeObservers(){

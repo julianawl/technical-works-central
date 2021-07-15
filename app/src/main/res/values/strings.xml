@@ -64,4 +64,20 @@
     <string name="nome_do_autor">Nome do Autor</string>
     <string name="blank_error_message">Campos obrigatórios em branco</string>
     <string name="confirmar_senha">Confirmar senha</string>
+    <string name="nome">Nome</string>
+    <string name="sobrenome">Sobrenome</string>
+    <string name="todos">Todos</string>
+    <string name="tipo_de_trabalho">Tipo de Trabalho</string>
+    <string-array name="courses">
+        <item>Todos</item>
+        <item>Ciência da Computação</item>
+        <item>Sistemas de Informação</item>
+    </string-array>
+    <string-array name="workTypes">
+        <item>Todos</item>
+        <item>TCC</item>
+        <item>Monografia de Pós Graduação</item>
+        <item>Dissertação de Mestrado</item>
+        <item>Tese de Doutorado</item>
+    </string-array>
 </resources>

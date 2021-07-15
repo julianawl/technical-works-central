@@ -3,4 +3,9 @@
     <style name="Circular">
         <item name="cornerSize">50%</item>
     </style>
+
+    <array name="initial_slider_values">
+        <item>1995f</item>
+        <item>2021f</item>
+    </array>
 </resources>

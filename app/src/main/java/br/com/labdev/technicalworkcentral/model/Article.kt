@@ -5,8 +5,8 @@ import java.io.Serializable
 data class Article(
     val year: String,
     val articleTitle: String,
-    val author: User,
-    val mentor: User,
+    val author: UserRegister,
+    val mentor: UserRegister,
     val studyArea: String,
     val course: String
 ): Serializable

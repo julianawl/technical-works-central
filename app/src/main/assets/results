@@ -3,16 +3,11 @@
     {
       "year": 2020,
       "articleTitle": "Discurso do Método",
-      "author": [
-        {
+      "author": {
           "name": "René Descartes",
           "pic": "https://lh4.googleusercontent.com/proxy/2m86WLTofSdbUzjBl8Fnjvzurv9zvYjzuOI3SjTC1cHwsFXd6SyEYdbrTvEw1DrC8VfeV536iJvZI9-XInq54Pq1XfxjIh0ut3H8kHrlvEaqxIo=s0-d",
           "socialMedia": [
             {
-              "smName": "Facebook",
-              "smLink": ""
-            },
-            {
               "smName": "Gmail",
               "smLink": ""
             },
@@ -21,18 +16,12 @@
               "smLink": ""
             }
           ]
-        }
-      ],
-      "mentor": [
-        {
+        },
+      "mentor": {
           "name": "Professor X",
           "pic": "https://lh4.googleusercontent.com/proxy/2m86WLTofSdbUzjBl8Fnjvzurv9zvYjzuOI3SjTC1cHwsFXd6SyEYdbrTvEw1DrC8VfeV536iJvZI9-XInq54Pq1XfxjIh0ut3H8kHrlvEaqxIo=s0-d",
           "socialMedia": [
             {
-              "smName": "Facebook",
-              "smLink": ""
-            },
-            {
               "smName": "Gmail",
               "smLink": ""
             },
@@ -41,10 +30,10 @@
               "smLink": ""
             }
           ]
-        }
-      ],
+        },
       "studyArea": "Programação Orientada a Objetos",
-      "course": "Ciência da Computação"
+      "course": "Ciência da Computação",
+      "articleDocument": ""
     },
     {
       "year": 2020,
@@ -55,10 +44,6 @@
           "pic": "https://lh4.googleusercontent.com/proxy/2m86WLTofSdbUzjBl8Fnjvzurv9zvYjzuOI3SjTC1cHwsFXd6SyEYdbrTvEw1DrC8VfeV536iJvZI9-XInq54Pq1XfxjIh0ut3H8kHrlvEaqxIo=s0-d",
           "socialMedia": [
             {
-              "smName": "Facebook",
-              "smLink": ""
-            },
-            {
               "smName": "Gmail",
               "smLink": ""
             },
@@ -74,10 +59,6 @@
           "name": "Professor X",
           "pic": "https://lh4.googleusercontent.com/proxy/2m86WLTofSdbUzjBl8Fnjvzurv9zvYjzuOI3SjTC1cHwsFXd6SyEYdbrTvEw1DrC8VfeV536iJvZI9-XInq54Pq1XfxjIh0ut3H8kHrlvEaqxIo=s0-d",
           "socialMedia": [
-            {
-              "smName": "Facebook",
-              "smLink": ""
-            },
             {
               "smName": "Gmail",
               "smLink": ""

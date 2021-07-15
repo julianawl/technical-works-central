@@ -51,10 +51,10 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        app:layout_constraintEnd_toEndOf="@id/dialog_study_area"
-        app:layout_constraintStart_toStartOf="@id/dialog_study_area"
-        app:layout_constraintTop_toBottomOf="@id/dialog_year_slider_title">
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@id/dialog_author_name"
+        app:layout_constraintStart_toStartOf="@id/dialog_author_name"
+        app:layout_constraintTop_toBottomOf="@id/dialog_author_name">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/dialog_keyword_edtxt"
@@ -72,9 +72,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="@id/dialog_author_name"
-        app:layout_constraintStart_toStartOf="@id/dialog_author_name"
-        app:layout_constraintTop_toBottomOf="@id/dialog_author_name">
+        app:layout_constraintEnd_toEndOf="@id/dialog_mentor_name"
+        app:layout_constraintStart_toStartOf="@id/dialog_mentor_name"
+        app:layout_constraintTop_toBottomOf="@id/dialog_mentor_name">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/dialog_study_area_edtxt"
@@ -87,21 +87,47 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/dialog_course"
-        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="8dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/dialog_study_area"
-        app:layout_constraintTop_toBottomOf="@id/dialog_mentor_name">
+        app:endIconMode="dropdown_menu"
+        app:layout_constraintTop_toBottomOf="@id/dialog_keyword"
+        app:layout_constraintStart_toStartOf="@id/dialog_keyword"
+        app:layout_constraintEnd_toEndOf="@id/dialog_keyword">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <AutoCompleteTextView
             android:id="@+id/dialog_course_edtxt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:hint="@string/curso"
+            android:text="@string/todos"
             android:backgroundTint="@color/white"
-            android:hint="@string/curso" />
+            android:inputType="none" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dialog_work_type"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:endIconMode="dropdown_menu"
+        app:layout_constraintTop_toBottomOf="@id/dialog_study_area"
+        app:layout_constraintStart_toStartOf="@id/dialog_study_area"
+        app:layout_constraintEnd_toEndOf="@id/dialog_study_area">
+
+        <AutoCompleteTextView
+            android:id="@+id/dialog_work_type_edtxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:hint="@string/tipo_de_trabalho"
+            android:text="@string/todos"
+            android:backgroundTint="@color/white"
+            android:inputType="none" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -109,12 +135,13 @@
         android:id="@+id/dialog_year_slider_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:text="@string/ano_de_publica_o"
-        android:textSize="15sp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
-        app:layout_constraintStart_toStartOf="@id/dialog_year_slider"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/dialog_course" />
 
     <com.google.android.material.slider.RangeSlider
@@ -122,14 +149,14 @@
         android:layout_width="190dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="8dp"
-        android:layout_marginEnd="8dp"
-        android:valueFrom="1995"
-        android:valueTo="2021"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/dialog_course"
-        app:layout_constraintStart_toStartOf="@id/dialog_course"
+        android:stepSize="1"
+        android:valueFrom="1995f"
+        android:valueTo="2021f"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dialog_year_slider_title"
-        app:layout_constraintVertical_bias="0.32999998" />
+        app:values="@array/initial_slider_values" />
 
     <TextView
         android:id="@+id/dialog_confirm_btn"

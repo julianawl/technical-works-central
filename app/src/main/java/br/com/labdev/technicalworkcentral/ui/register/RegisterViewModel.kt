@@ -31,17 +31,18 @@ class RegisterViewModel(
     val registerSucceed = _registerSucceed as LiveData<Unit>
 
 
-    private fun doRegister(fullName: String, email: String, password:String){
+    private fun doRegister(name: String, lastName: String, email: String, password:String){
         viewModelScope.launch {
-            repository.register(fullName, email, password)
+            repository.register(name, lastName, email, password)
         }
         _registerSucceed.postValue(Unit)
     }
 
-    fun validateCredentials(fullName: String, email: String, password: String, confirmPassword: String){
+    fun validateCredentials(name: String, lastName: String, email: String, password: String, confirmPassword: String){
         when{
             email.isBlank() || password.isBlank()
-                    || fullName.isBlank() || confirmPassword.isBlank() ->
+                    || name.isBlank() || lastName.isBlank()
+                    || confirmPassword.isBlank() ->
                 _anythingIsBlankError.postValue(Unit)
 
             !Patterns.EMAIL_ADDRESS.matcher(email).matches() ->
@@ -53,7 +54,7 @@ class RegisterViewModel(
             confirmPassword != password ->
                 _passwordIsDifferentError.postValue(Unit)
 
-            else -> doRegister(fullName, email, password)
+            else -> doRegister(name, lastName, email, password)
         }
     }
 
